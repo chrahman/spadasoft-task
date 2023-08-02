@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useMediaQuery } from "@mui/material";
-import { SideNavBar } from "../../components/Dashboard/SideNavbar";
+import { SideNavBar } from "../../components/Navbars/SideNavbar";
 import { Grid, Typography, Box } from "@mui/material";
 import StoreStates from "../../components/Dashboard/Charts/StoreStates";
 import Sales from "../../components/Dashboard/Sales";
-import TopNavBar from "../../components/Dashboard/TopNavBar";
+import TopNavBar from "../../components/Navbars/TopNavBar";
 
 const Dashboard = () => {
   const [openNav, setOpenNav] = useState(false);

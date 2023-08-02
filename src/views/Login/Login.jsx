@@ -12,7 +12,7 @@ const styles = {
     fill: "linear-gradient(225deg, #FA4A6F 0%, #EF5395 30.91%, #DE4DCB 75.85%, #CE4CE6 100%), #E252BF",
     background:
       "linear-gradient(225deg, #FA4A6F 0%, #EF5395 30.91%, #DE4DCB 75.85%, #CE4CE6 100%), #E252BF",
-    height: { xs: "100%", md: "100vh" },
+    height:  '100%' ,
     m: 0,
   },
   paper: {

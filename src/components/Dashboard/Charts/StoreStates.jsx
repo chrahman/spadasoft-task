@@ -1,5 +1,4 @@
 import {
-  CircularProgress,
   Divider,
   Grid,
   IconButton,
@@ -7,6 +6,7 @@ import {
 } from "@mui/material";
 import OverviewSales from "./OverviewSales";
 import slider from "../../../assets/images/slider.svg";
+import CircleProgress from "../../General/CircleProgress";
 
 const styles = {
   container: {
@@ -102,7 +102,7 @@ const StoreStates = () => {
         <Grid item flexGrow={1}>
           <Grid container spacing={1.8}>
             <Grid item>
-              <CircularProgress
+              <CircleProgress
                 variant="determinate"
                 sx={{ color: "#DB50E0" }}
                 value={75}
@@ -118,7 +118,7 @@ const StoreStates = () => {
         <Grid item flexGrow={1} ml={3}>
           <Grid container spacing={1.8}>
             <Grid item>
-              <CircularProgress
+              <CircleProgress
                 variant="determinate"
                 sx={{ color: "#DB50E0" }}
                 value={24}

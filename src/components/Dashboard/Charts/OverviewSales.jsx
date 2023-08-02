@@ -8,6 +8,7 @@ const data = [
     uv: 0,
     pv: 200,
     amt: 200,
+    fill: "rgba(183, 90, 255, 1)",
   },
 
   {
@@ -15,6 +16,7 @@ const data = [
     uv: 0,
     pv: 150,
     amt: 200,
+    fill: "rgba(245, 70, 177, 1)",
   },
 ];
 
@@ -37,8 +39,8 @@ export default function OverviewSales() {
       <YAxis />
       <Tooltip />
       <Legend />
-      <Bar dataKey="pv" fill="#8884d8" />
-      <Bar dataKey="uv" fill="#82ca9d" />
+      <Bar dataKey="pv" fill="rgba(183, 90, 255, 1)" />
+      <Bar dataKey="uv" fill="rgba(245, 70, 177, 1)" />
     </BarChart>
   );
 }

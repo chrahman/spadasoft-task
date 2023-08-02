@@ -28,6 +28,9 @@ const styles = {
     fontStyle: "normal",
     fontWeight: 700,
     textTransform: "uppercase",
+    "&:hover": {
+      background: "#5D8AC7",
+    }
   },
 };
 
