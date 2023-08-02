@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif !important;
+  background: #eee;
+}
+
+* {
+    font-family: "Rubik", sans-serif !important;
+}
+
+.recharts-default-legend {
+  display: none !important;
+}
+
+.recharts-layer .recharts-cartesian-axis-tick {
+  color: #bbb !important;
+  font-family: Rubik !important;
+  font-size: 9px !important;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 311.111% */
+  letter-spacing: 2px;
+}
+
+
+.css-1hobrgl-MuiButtonBase-root-MuiIconButton-root:hover {
+  background-color: transparent !important;
+}
