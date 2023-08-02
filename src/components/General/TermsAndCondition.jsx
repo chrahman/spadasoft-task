@@ -26,6 +26,7 @@ const styles = {
     alignItems: "center",
     backgroundColor: "white",
     color: "#DB50E0",
+    cursor:'pointer'
   },
 };
 
@@ -36,7 +37,7 @@ const TermsAndCondition = ({ label, action, onClick }) => {
         <FormControlLabel control={action} label={label} sx={styles.label} />
       </Grid>
       <Grid item xs={4} sx={styles.buttonContainer}>
-        <Box sx={styles.checkButton} onClick={onclick}>
+        <Box sx={styles.checkButton} onClick={onClick}>
           <CheckIcon />
         </Box>
       </Grid>
