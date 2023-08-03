@@ -7,7 +7,7 @@ import Button from "../../components/General/Button";
 
 const styles = {
   container: {
-    pb: "59px",
+    pb: "47px",
     pt: "79px",
     fill: "linear-gradient(225deg, #FA4A6F 0%, #EF5395 30.91%, #DE4DCB 75.85%, #CE4CE6 100%), #E252BF",
     background:
@@ -29,6 +29,7 @@ const styles = {
     boxShadow: "0px 20px 20px rgba(0, 0, 0, 0.10)",
     width: "100%",
     color: " #E23595",
+    textTransform: 'capitalize',
     "&:hover": {
       background: "white",
       color: " #E23595",
@@ -41,6 +42,8 @@ const styles = {
     boxSizing: "border-box",
     width: "100%",
     color: " #FFFFFF",
+    textTransform: 'capitalize',
+
     "&:hover": {
       background: "white",
       color: " black",
@@ -135,7 +138,7 @@ const Login = () => {
             </Grid>
           </Grid>
           <Grid item xs={12}>
-            <Button customStyles={styles.signUpButton} text="Sign Up" />
+            <Button customStyles={styles.signUpButton} onClick={handleLogin} text="Sign Up" />
           </Grid>
         </Grid>
       </Paper>

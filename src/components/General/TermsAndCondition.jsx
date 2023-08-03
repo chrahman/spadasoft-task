@@ -26,7 +26,8 @@ const styles = {
     alignItems: "center",
     backgroundColor: "white",
     color: "#DB50E0",
-    cursor:'pointer'
+    cursor: 'pointer',
+    boxShadow: '0px 20px 15px rgba(0, 0, 0, 0.05)',
   },
 };
 

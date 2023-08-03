@@ -3,11 +3,12 @@ import { CircularProgress } from "@mui/material";
 
 const styles = {
     container: {
-        transform: "rotate(360deg)",
         "& .MuiCircularProgress-circle": {
             strokeLinecap: "round",
         },
-        color: '#DB50E0'
+        color: '#DB50E0',
+        transform: "rotate(360deg) !important",
+
     }
 }
 

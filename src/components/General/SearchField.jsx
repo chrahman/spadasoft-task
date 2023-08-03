@@ -32,12 +32,17 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
   "& .MuiInputBase-input": {
-    borderBottom: "1px solid #E0E0E0",
+    borderBottom: "1px solid #E9E9E9",
     marginLeft: "35px",
     paddingLeft: 5,
     paddingBottom: "15px",
     marginBottom: "-15px",
     transition: theme.transitions.create("width"),
+    fontSize: '13.997px',
+    lineHeight: '28px',
+    color: '#CCC',
+    fontWeight: 500,
+    letterSpacing: 1,
     width: "100%",
     [theme.breakpoints.up("lg")]: {
       width: "61ch",

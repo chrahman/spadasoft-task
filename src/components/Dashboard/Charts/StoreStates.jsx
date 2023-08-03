@@ -57,13 +57,13 @@ const StoreStates = () => {
       <Grid item xs={12} px="22px">
         <Grid container>
           <Grid item xs={6}>
-            <Typography variant="h2">Store Stats</Typography>
+            <Typography variant="h2">Views PD</Typography>
           </Grid>
           <Grid item xs={6}>
             <Grid container spacing="8px" sx={styles.dateContainer}>
-              <Grid item xs={6}>
+              <Grid item xs={6} textAlign='right'>
                 <Typography variant="h2">26 OCT</Typography>
-                <Typography variant="span">Today</Typography>
+                <Typography variant="caption" textAlign='right'>Today</Typography>
               </Grid>
               <Grid item>
                 <IconButton>
@@ -92,10 +92,10 @@ const StoreStates = () => {
 
       <Grid container width="100%" my="17px">
         <Grid item xs={6}>
-          <Divider sx={{ color: "rgba(206, 87, 208, 1)" }} />
+          <Divider sx={{ borderColor: '#DB50E0', color: '#DB50E0' }} />
         </Grid>
         <Grid item xs={6}>
-          <Divider sx={{ color: "#DDD" }} />
+          <Divider sx={{ borderColor: "#DDD", color: '#DDD' }} />
         </Grid>
       </Grid>
       <Grid container sx={{ m: { xs: "0", md: "0px 43px" } }}>
