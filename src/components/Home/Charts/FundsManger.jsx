@@ -1,5 +1,5 @@
 import * as React from "react";
-import { LineChart, Line } from "recharts";
+import { LineChart, Line, ResponsiveContainer } from "recharts";
 import { useMediaQuery } from "@mui/material";
 
 const data = [
@@ -72,14 +72,17 @@ const lineStyle = {
 export default function FundsManger() {
   const isWidth1240 = useMediaQuery("(width: 1240px)");
   return (
-    <LineChart width={isWidth1240 ? 200 : 300} height={113} data={data}>
-      <Line
-        style={lineStyle}
-        type="monotone"
-        dataKey="pv"
-        stroke="#CE57D0"
-        strokeWidth={2}
-      />
-    </LineChart>
+    <ResponsiveContainer width="100%" height={113}>
+
+      <LineChart data={data}>
+        <Line
+          style={lineStyle}
+          type="monotone"
+          dataKey="pv"
+          stroke="#CE57D0"
+          strokeWidth={2}
+        />
+      </LineChart>
+    </ResponsiveContainer>
   );
 }

@@ -49,7 +49,7 @@ const LoginForm = () => {
 
   const handleLogin = () => {
     console.log("navigate");
-    navigate("/dashboard");
+    navigate("/home");
   };
 
   return (

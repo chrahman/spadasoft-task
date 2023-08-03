@@ -27,7 +27,7 @@ const DarkModeCard = () => {
       <Grid item xs={12} flexGrow={1}>
         <Grid container spacing={1.8}>
           <Grid item>
-            <Typography variant="h1">Dark Mode</Typography>
+            <Typography variant="h1" sx={{fontSize:"22px"}}>Dark Mode</Typography>
             <Typography
               variant="span"
               sx={{

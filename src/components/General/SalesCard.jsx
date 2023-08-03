@@ -25,6 +25,7 @@ const SalesCard = ({
   headerRightIcon,
   headerLeftIcon,
   bodyHeading,
+  fSize,
   bodyCaption,
   footer,
 }) => {
@@ -60,7 +61,7 @@ const SalesCard = ({
         <Grid item flexGrow={1}>
           <Grid container spacing={1.8} gap="7px">
             <Grid item>
-              <Typography variant="h1">{bodyHeading}</Typography>
+              <Typography variant="h1" sx={{fontSize: fSize ? fSize : "22px"}}>{bodyHeading}</Typography>
               <Typography
                 variant="span"
                 sx={{

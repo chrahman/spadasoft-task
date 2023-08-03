@@ -24,6 +24,7 @@ const styles = {
     color: "#757575",
     letterSpacing: "1.8px",
     lineHeight: "32px",
+    fontSize: "24px",
   },
   darkHeading: {
     color: "#1A1A1A",

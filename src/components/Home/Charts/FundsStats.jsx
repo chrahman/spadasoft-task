@@ -104,18 +104,18 @@ const FundsStates = () => {
         }}
       />
 
-      <Grid container mt="20px">
+      <Grid container mt="20px" sx={{ flexWrap: "unset"}}>
         <Grid item flexGrow={1}>
           <Grid container spacing={1.8}>
             <Grid item>
               <CircleProgress
                 variant="determinate"
-                sx={{ color: "#DB50E0" }}
-                value={75}
+                sx={{ color: "#DB50E0", transform: "rotate(90deg)" }}
+                value={13}
               />
             </Grid>
             <Grid item>
-              <Typography variant="h4">76%</Typography>
+              <Typography variant="h4">+13%</Typography>
               <Typography variant="caption">Organic</Typography>
             </Grid>
           </Grid>
@@ -128,12 +128,12 @@ const FundsStates = () => {
             <Grid item>
               <CircleProgress
                 variant="determinate"
-                sx={{ color: "#DB50E0" }}
-                value={24}
+                sx={{ color: "#DB50E0", transform: "rotate(180deg)" }}
+                value={82}
               />
             </Grid>
             <Grid item>
-              <Typography variant="h4">24%</Typography>
+              <Typography variant="h4">-28%</Typography>
               <Typography variant="caption">Other Parts</Typography>
             </Grid>
           </Grid>

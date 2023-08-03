@@ -67,6 +67,7 @@ const Home = () => {
                         }
                         bodyHeading="$12,487"
                         bodyCaption="+864 Comp."
+                        fSize="34px"
                         footer={
                           <Grid container alignItems="center">
                             <Grid item>
@@ -131,7 +132,7 @@ const Home = () => {
                 </Grid>
                 <Grid item xs={12} md={6} lg={2.5}>
                   <Grid container direction="column" gap={2}>
-                    <Grid item xs={12}>
+                    <Grid item xs={12} sx={{ maxWidth: "100% !important" }}>
                       <UsersPieChart />
                     </Grid>
                     <Grid item xs={12}>
@@ -156,7 +157,7 @@ const Home = () => {
                         bodyHeading="New Sale!"
                         footer={
                           <Grid container alignItems="center">
-                            <Grid item xs={6}>
+                            <Grid item xs={6} sx={{ maxWidth: "100% !important" }}>
                               <Typography
                                 sx={{
                                   fontSize: "12px",
@@ -208,7 +209,7 @@ const Home = () => {
                 </Grid>
                 <Grid item xs={12} md={6} lg={3.5}>
                   <Grid container direction="column" gap={2}>
-                    <Grid item xs={12}>
+                    <Grid item xs={12} sx={{  maxWidth: "100% !important" }}>
                       <FundsStates />
                     </Grid>
                     <Grid item xs={12}>
