@@ -1,11 +1,5 @@
-import {
-  Divider,
-  Grid,
-  IconButton,
-  Typography,
-} from "@mui/material";
+import { Divider, Grid, IconButton, Typography } from "@mui/material";
 import FundsManger from "./FundsManger";
-import slider from "../../../assets/images/slider.svg";
 import CircleProgress from "../../General/CircleProgress";
 
 const styles = {
@@ -54,16 +48,23 @@ const FundsStates = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item xs={12} px="22px">
+
+      <Grid item xs={12} sx={{ px: "5px", top: "20px", position: "relative" }}>
         <Grid container>
           <Grid item xs={6}>
-            <Typography variant="h2">Views PD</Typography>
+            <Typography variant="h2" sx={{ fontSize: "22px" }}>
+              Funds Mngr.
+            </Typography>
           </Grid>
           <Grid item xs={6}>
             <Grid container spacing="8px" sx={styles.dateContainer}>
-              <Grid item xs={6} textAlign='right'>
-                <Typography variant="h2">26 OCT</Typography>
-                <Typography variant="caption" textAlign='right'>Today</Typography>
+              <Grid item xs={6} textAlign="right">
+                <Typography variant="h2" sx={{ fontSize: "16px" }}>
+                  26 OCT
+                </Typography>
+                <Typography variant="caption" textAlign="right">
+                  Today
+                </Typography>
               </Grid>
               <Grid item>
                 <IconButton>
@@ -89,16 +90,14 @@ const FundsStates = () => {
       </Grid>
 
       <FundsManger />
+      <Divider
+        style={{
+          width: "100%",
+          background: "rgba(221, 221, 221, 1)",
+        }}
+      />
 
-      <Grid container width="100%" my="17px">
-        <Grid item xs={6}>
-          <Divider sx={{ borderColor: '#DB50E0', color: '#DB50E0' }} />
-        </Grid>
-        <Grid item xs={6}>
-          <Divider sx={{ borderColor: "#DDD", color: '#DDD' }} />
-        </Grid>
-      </Grid>
-      <Grid container sx={{ m: { xs: "0", md: "0px 43px" } }}>
+      <Grid container mt="20px">
         <Grid item flexGrow={1}>
           <Grid container spacing={1.8}>
             <Grid item>
@@ -130,9 +129,6 @@ const FundsStates = () => {
             </Grid>
           </Grid>
         </Grid>
-      </Grid>
-      <Grid item xs={12} textAlign="center">
-        <img src={slider} alt="Sliders" />
       </Grid>
     </Grid>
   );

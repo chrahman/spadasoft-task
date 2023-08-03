@@ -42,7 +42,11 @@ const DarkModeCard = () => {
           <Grid item xs={12} mt={"41px"}>
             <Grid container>
               <Grid item xs={12}>
-                <Grid container>
+                <Grid
+                  container
+                  justifyContent="space-between"
+                  alignItems="baseline"
+                >
                   <Grid item>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +63,7 @@ const DarkModeCard = () => {
                       />
                     </svg>
                   </Grid>
-                  <Grid item textAlign="right">
+                  <Grid item>
                     <CustomizedSwitcher />
                   </Grid>
                 </Grid>

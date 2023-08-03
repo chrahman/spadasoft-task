@@ -72,7 +72,12 @@ const SalesCard = ({
                 {bodyCaption}
               </Typography>
             </Grid>
-            <Divider sx={{ borderColor: "gray" }} />
+            <Divider
+              style={{
+                width: "100%",
+                background: "rgba(221, 221, 221, 1)",
+              }}
+            />
             <Grid item xs={12}>
               {footer}
             </Grid>

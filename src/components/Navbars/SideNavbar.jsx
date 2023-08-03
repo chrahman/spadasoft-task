@@ -24,14 +24,14 @@ const styles = {
   },
 };
 
-export const SideNavBar = ({ open, onClose }) => {
+export const SideNavBar = ({ open, onClose, active }) => {
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
 
   const content = (
     <Box sx={styles.drawer}>
       <Box
         sx={{
-          background: "white",
+          background: "#FAFAFA",
           width: "100%",
           height: "90px",
         }}
@@ -46,6 +46,7 @@ export const SideNavBar = ({ open, onClose }) => {
                 key={item.title}
                 path={item.path}
                 title={item.title}
+                active={active}
               />
             );
           })}

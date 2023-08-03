@@ -1,4 +1,6 @@
-import { Grid, Typography } from "@mui/material";
+import { Divider, Grid, Typography } from "@mui/material";
+import PeriodIcon from "../../assets/images/PeriodIcon.svg";
+import timeIconsBar from "../../assets/images/TimeIcon.svg";
 
 const styles = {
   container: {
@@ -18,28 +20,31 @@ const styles = {
     justifyContent: "flex-end",
     width: "100%",
   },
+  lightHeading: {
+    color: "#757575",
+    letterSpacing: "1.8px",
+    lineHeight: "32px",
+  },
+  darkHeading: {
+    color: "#1A1A1A",
+    fontWeight: 700,
+    lineHeight: "32px",
+  },
+  iconsContainer: {
+    display: "flex",
+    justifyContent: "flex-end",
+    flexGrow: "1",
+    pt: "20px",
+  },
 };
 
 const DateBox = () => {
   return (
     <Grid container sx={styles.container}>
-      <Grid item xs={12} px="4px">
+      <Grid item xs={12} px="4px" mb="37px">
         <Grid container>
           <Grid item xs={6}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="19"
-              viewBox="0 0 20 19"
-              fill="none"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M19.0003 0.000252008H1.0001C0.44752 0.000252008 -7.98702e-06 0.447578 -7.98702e-06 1.00006C-7.98702e-06 1.55218 0.44752 1.99988 1.0001 1.99988H19.0003C19.5524 1.99988 20.0001 1.55218 20.0001 1.00006C20.0001 0.447578 19.5524 0.000252008 19.0003 0.000252008ZM17.0001 5.00008H3.00004C1.34332 5.00008 -7.98702e-06 6.3432 -7.98702e-06 7.99991V16C-7.98702e-06 17.6567 1.34332 19.0002 3.00004 19.0002H17.0001C18.6571 19.0002 20.0001 17.6567 20.0001 16V7.99991C20.0001 6.3432 18.6571 5.00008 17.0001 5.00008ZM3.00004 6.99973H17.0001C17.5522 6.99973 18.0002 7.44743 18.0002 7.99991V16C18.0002 16.5521 17.5522 16.9998 17.0001 16.9998H3.00004C2.4477 16.9998 2.0002 16.5521 2.0002 16V7.99991C2.0002 7.44743 2.4477 6.99973 3.00004 6.99973Z"
-                fill="#AAAAAA"
-              />
-            </svg>
+            <img src={PeriodIcon} alt="Period Icon" />
           </Grid>
           <Grid item xs={6} textAlign="right">
             <svg
@@ -64,51 +69,29 @@ const DateBox = () => {
         <Grid item flexGrow={1}>
           <Grid container spacing={1.8}>
             <Grid item xs={12}>
-              <Typography variant="h2" sx={{ color: "#757575" }}>
+              <Typography variant="h2" sx={styles.lightHeading}>
                 Meet Mr Raul Atwood in the office after
               </Typography>
-              <Typography variant="h1">1 Hour</Typography>
+              <Typography variant="h1" sx={styles.darkHeading}>
+                1 Hour
+                <Divider
+                  style={{
+                    width: "100px",
+                    background: "rgba(221, 221, 221, 1)",
+                  }}
+                />
+              </Typography>
             </Grid>
             <Grid item xs={12} sx={{ marginTop: "227px" }}>
-              <Grid container>
+              <Grid container alignItems="center">
                 <Grid item>
                   <Typography variant="h2">16 APR</Typography>
-                  <Typography variant="caption">Organic</Typography>
+                  <Typography variant="caption" sx={{ lineHeight: "42.658px" }}>
+                    Organic
+                  </Typography>
                 </Grid>
-                <Grid
-                  item
-                  sx={{
-                    display: "flex",
-                    justifyContent: "flex-end",
-                    flexGrow: "1",
-                  }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="100"
-                    height="28"
-                    viewBox="0 0 105 28"
-                    fill="none"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M89 9.50024C89 8.67149 88.3287 8.00033 87.5002 8.00033C86.6715 8.00033 86 8.67149 86 9.50024C86 10.329 86.6715 11.0001 87.5002 11.0001C88.3287 11.0001 89 10.329 89 9.50024ZM94.4999 8.00033C95.3284 8.00033 95.9999 8.67149 95.9999 9.50024C95.9999 10.329 95.3284 11.0001 94.4999 11.0001C93.6719 11.0001 93.0001 10.329 93.0001 9.50024C93.0001 8.67149 93.6719 8.00033 94.4999 8.00033ZM101.5 8.00033C102.329 8.00033 103 8.67149 103 9.50024C103 10.329 102.329 11.0001 101.5 11.0001C100.672 11.0001 100 10.329 100 9.50024C100 8.67149 100.672 8.00033 101.5 8.00033Z"
-                      fill="#888888"
-                    />
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M47.9999 1.00008H58.0001L56.0002 3.0001H47.9999C47.4478 3.0001 47.0001 3.4478 47.0001 3.99992V14C47.0001 14.5525 47.4478 15.0002 47.9999 15.0002H58.0001C58.5522 15.0002 58.9999 14.5525 58.9999 14V12L61.0001 9.99995V14C61.0001 15.6571 59.6571 17.0002 58.0001 17.0002H47.9999C46.3432 17.0002 44.9999 15.6571 44.9999 14V3.99992C44.9999 2.34319 46.3432 1.00008 47.9999 1.00008ZM50.267 7.35498C50.6711 6.95429 51.3262 6.95429 51.7303 7.35498L53.9251 9.53209L61.2401 2.27538C61.6442 1.87469 62.299 1.87469 62.7031 2.27538C63.1069 2.67607 63.1069 3.32566 62.7031 3.72636L55.3882 10.9832C55.2549 11.1153 55.0943 11.2039 54.9245 11.2489C54.8792 11.4175 54.7899 11.5768 54.6566 11.7091C54.2522 12.1098 53.5972 12.1098 53.1931 11.7091L50.267 8.80635C49.8634 8.40564 49.8634 7.75567 50.267 7.35498Z"
-                      fill="#888888"
-                    />
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M14.4133 3.2987L19.6381 8.58234C19.6382 8.58252 19.6384 8.58269 19.6386 8.58287C20.0506 8.99937 20.0506 9.67515 19.6386 10.092L14.4133 15.3762C14.0015 15.7931 13.3328 15.7931 12.9205 15.3762C12.5082 14.9589 12.5082 14.2832 12.9205 13.8663L16.3421 10.4064H10.5C7.95365 10.4064 5.7091 11.6711 4.38698 13.5935H4.14654C4.14683 13.6039 4.14698 13.6143 4.14698 13.6247C4.14698 14.2119 3.68174 14.6873 3.10783 14.6873C2.53394 14.6873 2.0687 14.2119 2.0687 13.6247C2.0687 13.6143 2.06885 13.6039 2.06914 13.5935H1.91009C3.43299 10.4163 6.70684 8.21877 10.5 8.21877C10.8725 8.21877 11.24 8.23997 11.6013 8.2812H16.3548L12.9205 4.80824C12.5082 4.39136 12.5082 3.71558 12.9205 3.2987C13.3328 2.88182 14.0015 2.88182 14.4133 3.2987ZM10.5 26.9999C10.1275 26.9999 9.76 26.9787 9.39867 26.9374H11.6013C11.24 26.9787 10.8725 26.9999 10.5 26.9999Z"
-                      fill="#888888"
-                    />
-                  </svg>
+                <Grid item sx={styles.iconsContainer}>
+                  <img src={timeIconsBar} alt="timeIconsBar" />
                 </Grid>
               </Grid>
             </Grid>
