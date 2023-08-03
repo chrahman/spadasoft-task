@@ -1,28 +1,20 @@
 import { Box, ButtonBase } from "@mui/material";
-import { useNavigate, useLocation } from "react-router-dom";
 
 export const SideNavItem = ({ icon, path, title, active }) => {
   const linkProps = path
     ? {
-        component: "Button",
-        onClick: () => handleRouting(path),
+        component: "a",
+        href: path,
+        target: "_blank",
       }
     : {};
-
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const handleRouting = (path) => {
-    navigate(path);
-  };
-
 
   return (
     <li>
       <ButtonBase
         sx={{
           alignItems: "center",
-          borderRadius: 0,
+          borderRadius: 1,
           display: "flex",
           justifyContent: "flex-center",
           pl: "16px",
@@ -33,7 +25,7 @@ export const SideNavItem = ({ icon, path, title, active }) => {
           "&:hover": {
             backgroundColor: "rgba(255, 255, 255, 0.04)",
           },
-          borderRight: location.pathname === path ? "2px solid #CE57D0" : "none",
+          borderLeft: active ? "4px solid #CE57D0" : "none",
         }}
         {...linkProps}
       >
@@ -47,9 +39,7 @@ export const SideNavItem = ({ icon, path, title, active }) => {
               py: 1.5,
             }}
           >
-            <img src={icon} alt={title} style={{
-              filter: location.pathname === path ? "brightness(100)" : "none",
-            }} />
+            <img src={icon} alt={title} />
           </Box>
         )}
       </ButtonBase>

@@ -24,7 +24,7 @@ const styles = {
   },
 };
 
-export const SideNavBar = ({ open, onClose, active }) => {
+export const SideNavBar = ({ open, onClose }) => {
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
 
   const content = (
@@ -46,7 +46,6 @@ export const SideNavBar = ({ open, onClose, active }) => {
                 key={item.title}
                 path={item.path}
                 title={item.title}
-                active={active}
               />
             );
           })}
