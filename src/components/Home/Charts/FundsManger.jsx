@@ -1,7 +1,5 @@
 import * as React from "react";
 import { LineChart, Line, ResponsiveContainer } from "recharts";
-import { useMediaQuery } from "@mui/material";
-
 const data = [
   {
     name: "Page A",
@@ -70,7 +68,6 @@ const lineStyle = {
 };
 
 export default function FundsManger() {
-  const isWidth1240 = useMediaQuery("(width: 1240px)");
   return (
     <ResponsiveContainer width="100%" height={113}>
 
