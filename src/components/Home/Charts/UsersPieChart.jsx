@@ -1,6 +1,6 @@
 import React from "react";
 import { ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
-import { Grid, Container, Typography } from "@mui/material";
+import { Grid, Container, Typography, Box, useMediaQuery } from "@mui/material";
 import BarsSvg from "../../../assets/images/Bars.svg";
 import MoreIcon from "../../../assets/images/MoreIcon.svg";
 
@@ -45,12 +45,14 @@ const styles = {
 };
 
 const UsersPieChart = () => {
+  const isWidth1240 = useMediaQuery("(width: 1240px)");
+
   return (
-    <Container sx={{ ...styles.container, width: "100%" }}>
+    <Container sx={{ ...styles.container }}>
       <Grid container justifyContent="flex-end">
         <img src={BarsSvg} alt="Bars" />
       </Grid>
-      <div style={{ height: 122, width: 200 }}>
+      <Box style={{ height: 122, width: isWidth1240 ? 100 : 200 }}>
         <ResponsiveContainer>
           <PieChart>
             <Pie dataKey="value" data={data}>
@@ -64,7 +66,7 @@ const UsersPieChart = () => {
             </Pie>
           </PieChart>
         </ResponsiveContainer>
-      </div>
+      </Box>
 
       <Grid container justifyContent="space-between" alignItems="center">
         <Grid item>

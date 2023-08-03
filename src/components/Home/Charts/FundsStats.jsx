@@ -1,4 +1,10 @@
-import { Divider, Grid, IconButton, Typography } from "@mui/material";
+import {
+  Divider,
+  Grid,
+  IconButton,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import FundsManger from "./FundsManger";
 import CircleProgress from "../../General/CircleProgress";
 
@@ -23,6 +29,7 @@ const styles = {
 };
 
 const FundsStates = () => {
+  const isWidth1240 = useMediaQuery("(width: 1240px)");
   return (
     <Grid container sx={styles.container}>
       <Grid item xs={12}>
@@ -113,8 +120,10 @@ const FundsStates = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Divider orientation="vertical" />
-        <Grid item flexGrow={1} ml={3}>
+        <Grid item>
+          <Divider orientation="vertical" />
+        </Grid>
+        <Grid item flexGrow={1} ml={isWidth1240 ? 0 : 3}>
           <Grid container spacing={1.8}>
             <Grid item>
               <CircleProgress

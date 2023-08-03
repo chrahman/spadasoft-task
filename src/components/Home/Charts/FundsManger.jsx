@@ -1,5 +1,6 @@
 import * as React from "react";
 import { LineChart, Line } from "recharts";
+import { useMediaQuery } from "@mui/material";
 
 const data = [
   {
@@ -69,8 +70,9 @@ const lineStyle = {
 };
 
 export default function FundsManger() {
+  const isWidth1240 = useMediaQuery("(width: 1240px)");
   return (
-    <LineChart width={300} height={113} data={data}>
+    <LineChart width={isWidth1240 ? 200 : 300} height={113} data={data}>
       <Line
         style={lineStyle}
         type="monotone"
