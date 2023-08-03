@@ -15,7 +15,7 @@ const Dashboard = () => {
     <>
       <Box sx={{ display: "flex" }}>
         <Box sx={!isMobile && { width: "104px" }}>
-          <SideNavBar onClose={() => setOpenNav(false)} open={openNav} />
+          <SideNavBar onClose={() => setOpenNav(false)} open={openNav} active="Dashboard" />
         </Box>
         <Box
           sx={{

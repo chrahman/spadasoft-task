@@ -16,6 +16,12 @@ const routData = [
     },
     {
         id: 'route-002',
+        path: '/home',
+        component: reviews.Home,
+        requiresAuth: true,
+    },
+    {
+        id: 'route-003',
         path: '/dashboard',
         component: reviews.Dashboard,
         requiresAuth: true,
